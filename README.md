@@ -24,7 +24,7 @@ Sub StockAnalysis()
     For Each ws In ThisWorkbook.Worksheets
         ws.Activate
         lastRow = ws.Cells(Rows.Count, 1).End(xlUp).Row
-        resultRow = 2 ' Start output in row 2
+        resultRow = 2 
 
         greatestIncrease = 0
         greatestDecrease = 0
