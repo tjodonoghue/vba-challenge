@@ -26,12 +26,10 @@ Sub StockAnalysis()
         lastRow = ws.Cells(Rows.Count, 1).End(xlUp).Row
         resultRow = 2 ' Start output in row 2
 
-        ' Initialize variables
         greatestIncrease = 0
         greatestDecrease = 0
         greatestVolume = 0
 
-        ' Add headers
         ws.Cells(1, 9).Value = "Ticker"
         ws.Cells(1, 10).Value = "Quarterly Change"
         ws.Cells(1, 11).Value = "Percentage Change"
@@ -40,7 +38,6 @@ Sub StockAnalysis()
         ws.Cells(1, 16).Value = "Ticker"
         ws.Cells(1, 17).Value = "Value"
 
-        ' Loop through all rows in the worksheet
         For i = 2 To lastRow
             If ws.Cells(i + 1, 1).Value <> ws.Cells(i, 1).Value Then
                 ticker = ws.Cells(i, 1).Value
